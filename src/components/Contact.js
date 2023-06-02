@@ -18,6 +18,7 @@ const Contact = () => {
             style={{ border: "0", display: "block", margin: "auto" }}
             allowFullScreen=""
             loading="lazy"
+            title="Inspecta Danışmanlık ve Denetim A.Ş. Google Maps"
           ></iframe>
         </div>
         <div className="col-md-6">

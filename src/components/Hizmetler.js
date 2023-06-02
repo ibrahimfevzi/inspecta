@@ -36,8 +36,8 @@ const Hizmetler = () => {
               İş Hukuku ve Sosyal Güvenlik
             </h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              İş hukuku ve sosyal güvenlik konularında size destek sağlıyoruz.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </div>
@@ -52,8 +52,9 @@ const Hizmetler = () => {
               İş Sağlığı ve Güvenliği
             </h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              İş sağlığı ve güvenliği alanında size uzman danışmanlık hizmeti
+              sunuyoruz. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit.
             </p>
           </div>
         </div>
@@ -68,8 +69,8 @@ const Hizmetler = () => {
               Teşvikler
             </h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Teşvikler konusunda size rehberlik ediyoruz. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit.
             </p>
           </div>
         </div>
@@ -84,8 +85,8 @@ const Hizmetler = () => {
               KVKK
             </h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Kişisel verilerin korunması konusunda size destek sağlıyoruz.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </div>
@@ -100,8 +101,8 @@ const Hizmetler = () => {
               Yönetim ve Organizasyon
             </h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Yönetim ve organizasyon süreçlerinde size danışmanlık sağlıyoruz.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </div>
@@ -116,8 +117,8 @@ const Hizmetler = () => {
               Emeklilik
             </h5>
             <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Emeklilik planlaması konusunda size destek sağlıyoruz. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </div>

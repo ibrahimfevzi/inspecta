@@ -23,6 +23,7 @@ const Hizmetler = () => {
           flexWrap: "wrap",
           gap: "2rem",
           justifyContent: "center",
+          color: " #0f2145",
         }}
       >
         <div

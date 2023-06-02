@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+@import "normalize.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: initial;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container {
+  position: relative;
   min-height: 100vh;
+}
+
+.content-container {
+  max-width: 100%;
+  margin: 0;
+  padding-top: 100px;
+  padding-right: 0;
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.logo {
+  margin-left: 3rem;
+}
+
+.logo img {
+  width: 300px;
+}
+
+.container-navigation {
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15px 0;
+  margin: 0;
+  background-color: #0f2145;
+  z-index: 999;
+  background-color: rgba(15, 33, 69, 1);
+  transition: background-color 0.3s ease;
+  transform: translateY(
+    0
+  ); /* Y ekseni üzerinde herhangi bir başlangıç hareketi olmadığı belirtildi */
+}
+.container-navigation.scrolled {
+  background-color: rgba(15, 33, 69, 0.9);
 }
 
-.App-link {
-  color: #61dafb;
+.menu-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-right: 3rem;
+  gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu-items li {
+  margin-left: 10px;
+}
+
+.menu-items li:first-child {
+  margin-left: 0;
+}
+
+.hover {
+  position: relative;
+  display: inline-block;
+}
+
+.hover::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.hover:hover::before {
+  transform: scaleX(1);
+}
+
+.hover:hover a {
+  color: #fff;
+  text-decoration: none;
+  text-decoration-line: none;
+}
+
+.menu-items li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-items li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-items a.hover:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+@media (max-width: 804px) {
+  .menu-items {
+    display: none;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 33, 69, 0.9);
+    font-size: 0.8rem;
+    padding: 10px;
+    transition: all 0.3s ease;
+    transform: translateY(-100%); /* Menüyü gizlemek için dışarı taşıyoruz */
+    opacity: 0; /* Menüyü gizlemek için görünmez yapıyoruz */
+    pointer-events: none; /* Menüyü tıklanabilir olmaktan çıkarıyoruz */
   }
-  to {
-    transform: rotate(360deg);
+
+  .content-container {
+    padding-top: 140px;
+  }
+
+  .container-navigation.open .menu-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(
+      0
+    ); /* Menüyü göstermek için orijinal konumuna taşıyoruz */
+    opacity: 1; /* Menüyü görünür hale getiriyoruz */
+    pointer-events: auto; /* Menüyü tıklanabilir yapıyoruz */
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    padding-right: 2rem;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  .container-navigation.open .menu-toggle .bar:first-child {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .container-navigation.open .menu-toggle .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .container-navigation.open .menu-toggle .bar:last-child {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }

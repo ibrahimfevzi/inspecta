@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Navigation from "./components/Navigation";
+import Carousel from "./components/Carousel";
+import Hizmetler from "./components/Hizmetler";
+import Hakkimizda from "./components/Hakkimizda";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Navigation />
+      <div className="content-container">
+        <Carousel />
+        <br />
+        <br />
+        <div id="aboutScroll"></div>
+        <Hakkimizda />
+        <div id="servicesScroll"></div>
+        <Hizmetler />
+        <div id="contactScroll"></div>
+        <Contact />
+      </div>
     </div>
   );
 }

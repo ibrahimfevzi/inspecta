@@ -41,7 +41,7 @@ const Contact = () => {
               <br />
               www.inspecta.com.tr <br />
               <br />
-              i.kayan@inspecta.com.tr <br />
+              info@inspecta.com.tr <br />
               <br />
               +90 551 009 75 72 <br />
             </>

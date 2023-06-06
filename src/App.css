@@ -59,6 +59,7 @@ body {
   transform: translateY(
     0
   ); /* Y ekseni üzerinde herhangi bir başlangıç hareketi olmadığı belirtildi */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 .container-navigation.scrolled {
   background-color: rgba(15, 33, 69, 0.9);
@@ -161,6 +162,10 @@ a {
 
   .content-container {
     padding-top: 140px;
+  }
+  .container-navigation {
+    max-width: 1880px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
   }
 
   .container-navigation.open .menu-items {
